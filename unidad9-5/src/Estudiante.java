@@ -22,7 +22,7 @@ public class Estudiante extends Persona {
 			System.out.println("Calificacion invalida. "+ APROBADO + " asignado por defecto");
 			this.calificacion = APROBADO;
 		}
-		if ( edad >= EDAD_MINIMA || edad <= EDAD_MAXIMA ) {
+		if ( edad >= EDAD_MINIMA && edad <= EDAD_MAXIMA ) {
 			this.edad = edad;
 		}else {
 			System.out.println("Edad invalida. "+ EDAD_DEFECTO + " asignado por defecto");
