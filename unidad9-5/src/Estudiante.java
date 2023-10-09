@@ -2,6 +2,10 @@
 public class Estudiante extends Persona {
 	
 	final private double APROBADO = 5;
+	final private int EDAD_MAXIMA = 18;
+	final private int EDAD_MINIMA = 10;
+	final private int EDAD_DEFECTO = 12;
+	
 	protected double calificacion;
 	
 	public Estudiante() {
@@ -18,6 +22,14 @@ public class Estudiante extends Persona {
 			System.out.println("Calificacion invalida. "+ APROBADO + " asignado por defecto");
 			this.calificacion = APROBADO;
 		}
+		if ( edad >= EDAD_MINIMA && edad <= EDAD_MAXIMA ) {
+			this.edad = edad;
+		}else {
+			System.out.println("Edad invalida. "+ EDAD_DEFECTO + " asignado por defecto");
+			this.edad = EDAD_DEFECTO;
+		}
+		
+		
 	}
 
 	public boolean asistencia () {
