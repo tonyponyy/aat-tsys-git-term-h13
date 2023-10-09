@@ -41,4 +41,8 @@ public class Persona {
 		this.sexo = sexo;
 	}
 	
+	public boolean asistencia () {
+		return true;
+		
+	}
 }
