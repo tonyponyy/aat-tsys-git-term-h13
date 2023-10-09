@@ -1,27 +1,25 @@
 
 public class Profesor extends Persona {
 	
-	final private double APROBADO = 5;
-	protected double calificacion;
+	final private String MATERIA_DEFECTO = "FISICA";
+	protected String materia;
 	
-	public Estudiante() {
+	public Profesor() {
 		super();
-		this.calificacion = 0;
+		this.materia = "";
 	}
 
-	public Estudiante(String nombre, int edad, boolean sexo, double calificacion) {
+	public Profesor(String nombre, int edad, boolean sexo, String materia) {
 		super(nombre, edad, sexo);
-		if (calificacion > 0 && calificacion < 11) {
-			this.calificacion = calificacion;
-		}
-		else {
-			System.out.println("Calificacion invalida. "+ APROBADO + " asignado por defecto");
-			this.calificacion = APROBADO;
+		if (materia.compareToIgnoreCase("FISICA") == -1 &&materia.compareToIgnoreCase("MATEMATICAS") ==-1 &&materia.compareToIgnoreCase("FILOSOFIA") == -1) {
+			this.materia = MATERIA_DEFECTO;
+		}else {
+			this.materia = materia;
 		}
 	}
 
 	public boolean asistencia () {
-		if (Math.random()> 0.5){
+		if (Math.random()> 0.2){
 			return true;
 		}else {
 			return false;
