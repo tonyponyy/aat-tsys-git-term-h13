@@ -29,7 +29,16 @@ public class Estudiante extends Persona {
 			this.edad = EDAD_DEFECTO;
 		}
 		
-		
+	}
+	
+	public boolean getSexo() {
+		return sexo;
+	}
+	public double getCalificacion() {
+		return calificacion;
+	}
+	public String getNombre() {
+		return nombre;
 	}
 
 	public boolean asistencia () {

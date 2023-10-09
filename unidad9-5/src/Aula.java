@@ -43,14 +43,17 @@ public class Aula {
 	
 	public void aprobados() {
 		int h = 0;
-		if(darClase()) {
+		int m = 0;
 			for (int i = 0; i<distribucion.length;i++) {
-				if (distribucion[i].sexo) {
-					h++;
+				if (distribucion[i].calificacion >= 5) {
+					if (distribucion[i].getSexo()) {
+					h++;	
+					}else {
+					m++;
+					}
 				}
 			}
-		}
-		System.out.println("Hay: "+h+" hombres y "+ (distribucion.length-h) +" mujeres");
+		System.out.println("Hay: "+h+" hombres y "+ m +" mujeres aprobados.");
 	}
 	
 }
